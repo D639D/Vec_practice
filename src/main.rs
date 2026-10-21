@@ -4,10 +4,10 @@ fn main() {
     let mut numbers = vec![1, 2, 3, 4, 5];
     println!("{:?}", median(&mut numbers));
     println!("{:?}", mode_of_list(&numbers));
-    println!("{:?}", average_value(numbers));
+    println!("{:?}", average_value(&numbers));
 }
 
-fn median(numbers: &mut Vec<u32>) -> Option<u32> {
+fn median(numbers: &mut [u32]) -> Option<u32> {
     if numbers.is_empty() {
         None
     } else {
@@ -37,7 +37,7 @@ fn mode_of_list(numbers: &[u32]) -> Option<u32> {
     }
 }
 
-fn average_value(numbers: Vec<u32>) -> Option<u32> {
+fn average_value(numbers: &[u32]) -> Option<u32> {
     if numbers.is_empty() {
         None
     } else {
